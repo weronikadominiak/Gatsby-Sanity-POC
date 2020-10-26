@@ -8,7 +8,7 @@ import blockContent from "./blockContent"
 import dev from "./dev"
 import game from "./game"
 import author from "./author"
-import events from "./events"
+import event from "./event"
 import plotSummary from "./plotSummary"
 import plotSummaries from "./plotSummaries"
 import blogPosts from "./blogPosts"
@@ -24,13 +24,13 @@ export default createSchema({
     // in the studio.
     game,
     author,
-    events,
+    event,
     blogPosts,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,
-    plotSummary,
-    plotSummaries,
+    plotSummary, // todo
+    plotSummaries, // todo
     dev,
   ]),
 })

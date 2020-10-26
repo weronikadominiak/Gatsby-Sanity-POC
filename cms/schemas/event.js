@@ -1,8 +1,8 @@
 import { MdLocalPlay as icon } from "react-icons/md"
 
 export default {
-  name: "events",
-  title: "Events",
+  name: "event",
+  title: "Event",
   type: "document",
   icon,
   fields: [
@@ -11,6 +11,15 @@ export default {
       title: "Title",
       type: "string",
       description: "E.g.: Our first ever screening of Gattaca",
+    },
+    {
+      name: "slug",
+      title: "Slug",
+      type: "slug",
+      options: {
+        source: "title",
+        maxLength: 100,
+      },
     },
     {
       name: "game",
