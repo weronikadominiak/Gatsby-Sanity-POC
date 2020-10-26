@@ -1,6 +1,6 @@
 export default {
-  name: "crewMember",
-  title: "Crew Member",
+  name: "dev",
+  title: "Dev",
   type: "object",
   fields: [
     {
@@ -14,10 +14,10 @@ export default {
       type: "string",
     },
     {
-      name: "person",
-      title: "Person",
+      name: "dev",
+      title: "Dev",
       type: "reference",
-      to: [{ type: "person" }],
+      to: [{ type: "author" }],
     },
     {
       name: "externalId",
@@ -32,10 +32,10 @@ export default {
   ],
   preview: {
     select: {
-      name: "person.name",
+      name: "author.name",
       job: "job",
       department: "department",
-      media: "person.image",
+      media: "author.image",
     },
     prepare(selection) {
       const { name, job, department, media } = selection

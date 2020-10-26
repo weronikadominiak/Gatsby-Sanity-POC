@@ -1,8 +1,8 @@
 import { MdLocalMovies as icon } from "react-icons/md"
 
 export default {
-  name: "movie",
-  title: "Movie",
+  name: "game",
+  title: "Game",
   type: "document",
   icon,
   fields: [
@@ -49,16 +49,10 @@ export default {
       },
     },
     {
-      name: "castMembers",
-      title: "Cast Members",
+      name: "devs",
+      title: "Devs",
       type: "array",
-      of: [{ type: "castMember" }],
-    },
-    {
-      name: "crewMembers",
-      title: "Crew Members",
-      type: "array",
-      of: [{ type: "crewMember" }],
+      of: [{ type: "dev" }],
     },
   ],
   preview: {
@@ -66,8 +60,6 @@ export default {
       title: "title",
       date: "releaseDate",
       media: "poster",
-      castName0: "castMembers.0.person.name",
-      castName1: "castMembers.1.person.name",
     },
     prepare(selection) {
       const year = selection.date && selection.date.split("-")[0]
