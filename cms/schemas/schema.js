@@ -10,7 +10,6 @@ import role from "./people/role"
 import game from "./game"
 import event from "./event"
 import blogPosts from "./blog/blogPosts"
-import category from "./blog/category"
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -24,7 +23,6 @@ export default createSchema({
     game,
     event,
     blogPosts,
-    category,
     author,
     role,
     // When added to this list, object types can be used as

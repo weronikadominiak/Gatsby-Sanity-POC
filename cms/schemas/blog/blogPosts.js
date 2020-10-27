@@ -54,15 +54,22 @@ export default {
     {
       name: "category",
       title: "Category",
-      type: "reference",
-      to: [{ type: "category" }],
+      type: "string",
+      options: {
+        list: [
+          { title: "Game", value: "game" },
+          { title: "Tech", value: "tech" },
+          { title: "Company", value: "company" },
+        ],
+        layout: "dropdown",
+      }
     },
   ],
   preview: {
     select: {
       title: "title",
       date: "releaseDate",
-      media: "poster",
+      media: "hero",
     },
     prepare(selection) {
       const year = selection.date && selection.date.split("-")[0]

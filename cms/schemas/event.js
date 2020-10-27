@@ -22,24 +22,11 @@ export default {
       },
     },
     {
-      name: "game",
-      title: "Game",
-      type: "reference",
-      to: [{ type: "game" }],
-      description: "Which movie are we screening",
-    },
-    {
-      name: "published",
-      title: "Published",
+      name: "isOpen",
+      title: "isOpen",
       type: "boolean",
       description:
-        "Set to published when this screening should be visible on a front-end",
-    },
-    {
-      name: "location",
-      title: "Location",
-      type: "geopoint",
-      description: "Where will the screening take place?",
+        "Set to isOpen when this screening should be visible on a front-end",
     },
     {
       name: "beginAt",
@@ -54,16 +41,16 @@ export default {
       description: "When does the screening end?",
     },
     {
-      name: "allowedGuests",
+      name: "level",
       title: "Who can come?",
       type: "string",
       options: {
         list: [
-          { title: "Members", value: "members" },
-          { title: "Members and friends", value: "friends" },
-          { title: "Anyone", value: "anyone" },
+          { title: "< 1 year experience", value: "members" },
+          { title: "2-3 years experience", value: "friends" },
+          { title: "3 + years experience", value: "anyone" },
         ],
-        layout: "radio",
+        layout: "dropdown",
       },
     },
     {
@@ -79,11 +66,19 @@ export default {
       type: "file",
       description: "PDF for printing a physical ticket",
     },
+    {
+      name: "image",
+      title: "Image",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    },
   ],
   preview: {
     select: {
       title: "title",
-      media: "movie.poster",
+      media: "movie.image",
     },
   },
 }

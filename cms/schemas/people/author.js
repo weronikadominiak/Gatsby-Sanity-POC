@@ -35,6 +35,11 @@ export default {
         hotspot: true,
       },
     },
+    {
+      name: "about",
+      title: "About",
+      type: "blockContent",
+    },
   ],
   preview: {
     select: { title: "name", media: "image" },

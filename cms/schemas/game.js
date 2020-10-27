@@ -42,6 +42,7 @@ export default {
       name: "team",
       title: "Team",
       type: "array",
+      description: 'Some description',
       of: [
         {
           name: "author",
