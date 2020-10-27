@@ -7,8 +7,9 @@
   "author": "Weronika Dominiak <weronika.dominiak3@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
-    "start": "sanity start",
-    "test": "sanity check"
+    "develop": "sanity start",
+    "test": "sanity check",
+    "deploy": "sanity graphql deploy && sanity deploy"
   },
   "keywords": [
     "sanity"
