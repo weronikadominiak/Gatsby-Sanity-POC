@@ -54,16 +54,19 @@ export default {
     {
       name: "category",
       title: "Category",
-      type: "string",
-      options: {
-        list: [
-          { title: "Game", value: "game" },
-          { title: "Tech", value: "tech" },
-          { title: "Company", value: "company" },
-        ],
-        layout: "dropdown",
-      }
+      type: "reference",
+      to: [{ type: "category" }],
+
     },
+    {
+      name: 'tags',
+      title: 'Tags',
+      type: 'array',
+      of: [{type: 'string'}],
+      options: {
+        layout: 'tags'
+      }
+    }
   ],
   preview: {
     select: {
