@@ -5,13 +5,12 @@ import schemaTypes from "all:part:@sanity/base/schema-type"
 
 // We import object and document schemas
 import blockContent from "./blockContent"
-import dev from "./dev"
+import author from "./people/author"
+import role from "./people/role"
 import game from "./game"
-import author from "./author"
 import event from "./event"
-import plotSummary from "./plotSummary"
-import plotSummaries from "./plotSummaries"
-import blogPosts from "./blogPosts"
+import blogPosts from "./blog/blogPosts"
+import category from "./blog/category"
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -23,14 +22,13 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
     game,
-    author,
     event,
     blogPosts,
+    category,
+    author,
+    role,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,
-    plotSummary, // todo
-    plotSummaries, // todo
-    dev,
   ]),
 })

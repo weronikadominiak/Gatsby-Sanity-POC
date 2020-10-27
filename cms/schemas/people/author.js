@@ -2,7 +2,7 @@ import UserIcon from "part:@sanity/base/user-icon"
 
 export default {
   name: "author",
-  title: "Author",
+  title: "Team",
   type: "document",
   icon: UserIcon,
   fields: [
@@ -20,6 +20,12 @@ export default {
         source: "name",
         maxLength: 100,
       },
+    },
+    {
+      name: "role",
+      title: "Role",
+      type: "reference",
+      to: [{ type: "role" }],
     },
     {
       name: "image",

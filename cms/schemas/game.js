@@ -31,16 +31,6 @@ export default {
       type: "datetime",
     },
     {
-      name: "externalId",
-      title: "External ID",
-      type: "number",
-    },
-    {
-      name: "popularity",
-      title: "Popularity",
-      type: "number",
-    },
-    {
       name: "poster",
       title: "Poster Image",
       type: "image",
@@ -49,10 +39,17 @@ export default {
       },
     },
     {
-      name: "devs",
-      title: "Devs",
+      name: "team",
+      title: "Team",
       type: "array",
-      of: [{ type: "dev" }],
+      of: [
+        {
+          name: "author",
+          title: "Author",
+          type: "reference",
+          to: [{ type: "author" }],
+        },
+      ],
     },
   ],
   preview: {

@@ -26,33 +26,36 @@ export default {
       type: "blockContent",
     },
     {
-      name: "releaseDate",
-      title: "Release date",
+      name: "publishDate",
+      title: "Publish date",
       type: "datetime",
     },
     {
-      name: "externalId",
-      title: "External ID",
-      type: "number",
-    },
-    {
-      name: "popularity",
-      title: "Popularity",
-      type: "number",
-    },
-    {
-      name: "poster",
-      title: "Poster Image",
+      name: "hero",
+      title: "Hero Image",
       type: "image",
       options: {
         hotspot: true,
       },
     },
     {
-      name: "devs",
-      title: "Devs",
+      name: "authos",
+      title: "Authors",
       type: "array",
-      of: [{ type: "dev" }],
+      of: [
+        {
+          name: "author",
+          title: "Author",
+          type: "reference",
+          to: [{ type: "author" }],
+        },
+      ],
+    },
+    {
+      name: "category",
+      title: "Category",
+      type: "reference",
+      to: [{ type: "category" }],
     },
   ],
   preview: {
