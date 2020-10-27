@@ -1,47 +1,44 @@
-import { MdSettings as icon } from "react-icons/md"
+import { MdSettings as icon } from 'react-icons/md';
 
 export default {
-  name: "siteSettings",
-  title: "Settings",
-  type: "document",
+  name: 'siteSettings',
+  title: 'Settings',
+  type: 'document',
   icon,
   fields: [
-    { 
+    {
       name: 'title',
       title: 'Title',
-      type: "string",
+      type: 'string',
     },
     {
-        name: "someSetting",
-        title: "someSetting",
-        type: "boolean",
-        description:
-        "This is some very important setting",
+      name: 'someSetting',
+      title: 'someSetting',
+      type: 'boolean',
+      description: 'This is some very important setting',
+    },
+    {
+      name: 'tags',
+      title: 'Tags',
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: {
+        layout: 'tags',
       },
-      {
-        name: 'tags',
-        title: 'Tags',
-        type: 'array',
-        of: [{type: 'string'}],
-        options: {
-          layout: 'tags'
-        },
-        description:
-        "Tags for the website",
+      description: 'Tags for the website',
+    },
+    {
+      name: 'Sth',
+      title: 'sth',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Game', value: 'game' },
+          { title: 'Tech', value: 'tech' },
+          { title: 'Company', value: 'company' },
+        ],
+        layout: 'dropdown',
       },
-      {
-        name: "Sth",
-        title: "sth",
-        type: "string",
-        options: {
-          list: [
-            { title: "Game", value: "game" },
-            { title: "Tech", value: "tech" },
-            { title: "Company", value: "company" },
-          ],
-          layout: "dropdown",
-        }
-      },
-
-  ]
-}
+    },
+  ],
+};
