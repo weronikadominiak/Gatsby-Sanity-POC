@@ -39,7 +39,7 @@ export default {
       },
     },
     {
-      name: 'authos',
+      name: 'authors',
       title: 'Authors',
       type: 'array',
       of: [

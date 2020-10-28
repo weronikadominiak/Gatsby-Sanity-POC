@@ -58,8 +58,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   `);
 
   const generatePage = (data, templatePath) => {
-    console.log(data);
-    data.forEach((element) => {
+    data.forEach(element => {
       createPage({
         path: element.slug.current,
         component: require.resolve(templatePath),

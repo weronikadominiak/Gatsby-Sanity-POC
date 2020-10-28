@@ -6,21 +6,26 @@ const useBlogPosts = () => {
       allSanityBlogPost {
         edges {
           node {
+            id
+            title
+            publishDate
+            tags
+            category {
+              title
+            }
             slug {
               current
             }
-            title
-            id
           }
         }
       }
     }
   `);
 
-  return data.allSanityBlogPost.edges.map((post) => ({
+  return data.allSanityBlogPost.edges.map(post => ({
+    ...post.node,
     slug: post.node.slug.current,
-    title: post.node.title,
-    id: post.node.id,
+    category: post.node.category.title,
   }));
 };
 

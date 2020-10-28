@@ -14,13 +14,12 @@ const IndexPage = ({ data }) => {
   const events = useEvents();
   const blogPosts = useBlogPosts();
 
-  console.log(authors);
   return (
     <Layout>
       <SEO title="Home" />
       <h2>Games:</h2>
       <ul>
-        {games.map((game) => (
+        {games.map(game => (
           <li key={game.id}>
             <Link to={game.slug}>{game.title}</Link>
           </li>
@@ -29,7 +28,7 @@ const IndexPage = ({ data }) => {
       <hr />
       <h2>Events:</h2>
       <ul>
-        {events.map((event) => (
+        {events.map(event => (
           <li key={event.id}>
             <Link to={event.slug}>{event.title}</Link>
           </li>
@@ -38,7 +37,7 @@ const IndexPage = ({ data }) => {
       <hr />
       <h2>Blog:</h2>
       <ul>
-        {blogPosts.map((post) => (
+        {blogPosts.map(post => (
           <li key={post.id}>
             <Link to={post.slug}>{post.title}</Link>
           </li>
@@ -47,7 +46,7 @@ const IndexPage = ({ data }) => {
       <hr />
       <h2>Team:</h2>
       <ul>
-        {authors.map((author) => (
+        {authors.map(author => (
           <li key={author.id}>
             <Link to={author.slug}>{author.name}</Link>
           </li>
