@@ -8,6 +8,10 @@
  *    type: 'blockContent'
  *  }
  */
+import React from 'react';
+const highlightIcon = () => <span style={{ fontWeight: 'bold' }}>H</span>;
+const highlightRender = props => <span className="highlight">{props.children}</span>;
+
 export default {
   title: 'Block Content',
   name: 'blockContent',
@@ -36,6 +40,17 @@ export default {
         decorators: [
           { title: 'Strong', value: 'strong' },
           { title: 'Emphasis', value: 'em' },
+          { title: 'Code', value: 'code' },
+          { title: 'Underline', value: 'underline' },
+          { title: 'Strike', value: 'strike-through' },
+          {
+            title: 'Highlight',
+            value: 'highlight',
+            blockEditor: {
+              icon: highlightIcon,
+              render: highlightRender,
+            },
+          },
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
@@ -60,6 +75,24 @@ export default {
     {
       type: 'image',
       options: { hotspot: true },
+      fields: [
+        {
+          name: 'caption',
+          type: 'string',
+          title: 'Caption',
+          options: {
+            isHighlighted: true, // <-- make this field easily accessible, if false it would be visible in edit mode
+          },
+        },
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'alt',
+          options: {
+            isHighlighted: true, // <-- make this field easily accessible, if false it would be visible in edit mode
+          },
+        },
+      ],
     },
   ],
 };
