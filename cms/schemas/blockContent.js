@@ -8,6 +8,8 @@
  *    type: 'blockContent'
  *  }
  */
+import { MdLocalPlay as icon } from 'react-icons/md';
+
 import React from 'react';
 const highlightIcon = () => <span style={{ fontWeight: 'bold' }}>H</span>;
 const highlightRender = props => <span className="highlight">{props.children}</span>;
@@ -93,6 +95,12 @@ export default {
           },
         },
       ],
+    },
+    {
+      title: 'Iframe',
+      name: 'iframe',
+      type: 'iframe',
+      icon: icon,
     },
   ],
 };

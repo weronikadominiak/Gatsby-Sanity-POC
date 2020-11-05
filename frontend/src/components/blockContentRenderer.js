@@ -12,6 +12,7 @@ const serializers = {
         <figcaption>{props.node.caption}</figcaption>
       </figure>
     ),
+    iframe: props => <div dangerouslySetInnerHTML={{ __html: props.node.code }}></div>,
   },
   marks: {
     highlight: props => <span className="highlight">{props.children}</span>,

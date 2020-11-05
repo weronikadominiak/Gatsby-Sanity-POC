@@ -35,7 +35,7 @@ module.exports = {
         dataset: `production`,
         // a token with read permissions is required
         // if you have a private dataset
-        token: process.env.SANITY_TOKEN,
+        token: process.env.SANITY_TOKEN_READ_ONLY,
         watchMode: true,
         overlayDrafts: true,
       },

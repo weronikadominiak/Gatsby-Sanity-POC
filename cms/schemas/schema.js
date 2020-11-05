@@ -12,6 +12,8 @@ import event from './event';
 import blogPosts from './blog/blogPosts'; // should be blogPost
 import category from './blog/category';
 import siteSettings from './settings';
+import iframe from './iframe';
+import iframeGroup from './iframeGroup';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -28,6 +30,8 @@ export default createSchema({
     category,
     author,
     role,
+    iframe,
+    iframeGroup,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,
